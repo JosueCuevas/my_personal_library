@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./forms.css">
+  <title>My Form</title>
+</head>
+
+<body>
+  <main>
+    <form action="https://formsubmit.co/your-email@abc.com" method="POST" class="contact-form">
+      <label class="input">
+        <input type="text" name="name" title="Name only accept letters and blank spaces"><span
+          class="name"><span>Name</span></span>
+      </label>
+      <label class="input m-top-2r">
+        <input type="text" name="email" title="incorrect e-mail"
+          pattern="^[A-Za-z0-9]+(\.[A-Za-z0-9]+|-[A-Za-z0-9]+|_[A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,15})$"
+          required>
+        <span class="email"><span>e-mail</span></span>
+      </label>
+      <textarea name="comments" cols="30" rows="10" placeholder="Escribe tus comentarios..." data-pattern="^.{1,255}"
+        title="Your comment should not exceed more than 255 characters" required>
+            </textarea>
+      <button class="btn-submit m-top-1r" type="submit">Send</button>
+    </form>
+  </main>
+  <script src="./control-inputs-my-form.js"></script>
+</body>
+
+</html>
